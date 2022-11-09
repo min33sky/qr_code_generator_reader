@@ -10,7 +10,7 @@ const titleMap = {
 type Tab = keyof typeof titleMap;
 
 export default function App() {
-  const [mode, setMode] = useState<Tab>('Generator');
+  const [mode, setMode] = useState<Tab>('Reader');
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-slate-800">
