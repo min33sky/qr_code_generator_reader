@@ -23,10 +23,13 @@ export default function Reader() {
 
   const fetchQrCode = async (formData: FormData) => {
     try {
-      const response = await fetch('http://api.qrserver.com/v1/read-qr-code/', {
-        method: 'POST',
-        body: formData,
-      });
+      const response = await fetch(
+        'https://api.qrserver.com/v1/read-qr-code/',
+        {
+          method: 'POST',
+          body: formData,
+        },
+      );
       const data = await response.json();
       console.log(data);
       const result = data[0].symbol[0].data;
@@ -59,7 +62,7 @@ export default function Reader() {
       <section>
         <label
           htmlFor="file"
-          className="group grid h-56 w-full cursor-pointer place-content-center place-items-center gap-y-4 bg-slate-300 transition hover:bg-slate-600 hover:text-slate-200"
+          className="group grid h-56 w-full cursor-pointer place-content-center place-items-center gap-y-4 bg-slate-300 transition hover:bg-slate-400 hover:text-slate-200"
         >
           {qrUrl ? (
             <img src={qrUrl} className="h-52" alt="QR Code" />

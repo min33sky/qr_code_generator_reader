@@ -13,7 +13,7 @@ export default function App() {
   const [mode, setMode] = useState<Tab>('Reader');
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-slate-800">
+    <main className="flex min-h-screen flex-col items-center justify-center  bg-gradient-to-tr from-slate-800 to-slate-500">
       <div className="w-11/12 max-w-xl space-y-4 rounded-lg bg-slate-100 px-6 py-10">
         <header className="flex flex-col space-y-2 ">
           <h1 className="text-center text-3xl font-bold text-slate-700 ">
