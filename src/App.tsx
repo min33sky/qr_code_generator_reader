@@ -21,13 +21,13 @@ export default function App() {
           </h1>
           <nav className="flex justify-end gap-4">
             <button
-              className="rounded-md bg-slate-700 px-5 py-2 text-slate-100 transition hover:bg-slate-900"
+              className="rounded-md bg-slate-700 px-5 py-2 tracking-wider text-slate-100 transition hover:bg-slate-900"
               onClick={() => setMode('Generator')}
             >
               생성
             </button>
             <button
-              className="rounded-md bg-slate-700 px-5 py-2 text-slate-100 transition hover:bg-slate-900"
+              className="rounded-md bg-slate-700 px-5 py-2 tracking-wider text-slate-100 transition hover:bg-slate-900"
               onClick={() => setMode('Reader')}
             >
               읽기
