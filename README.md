@@ -23,3 +23,7 @@ npm install
 - React
 - TypeScript
 - Tailwind CSS
+
+## To Do
+
+- [ ] QR Code Download

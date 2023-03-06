@@ -7,6 +7,7 @@ import {
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline';
 import { Toaster } from 'react-hot-toast';
+import Footer from './components/Footer';
 
 const titleMap = {
   Generator: 'QR 코드 생성기',
@@ -65,6 +66,7 @@ export default function App() {
           </section>
         </div>
       </main>
+      <Footer />
       <Toaster />
     </>
   );
