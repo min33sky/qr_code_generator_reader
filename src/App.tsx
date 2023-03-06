@@ -38,13 +38,6 @@ export default function App() {
               onClick={() => setMode('Generator')}
             >
               <PlusIcon className="h-6 w-6" />
-              <p
-                className={`${
-                  mode === 'Generator' ? 'inline-block' : 'hidden'
-                }`}
-              >
-                Create
-              </p>
             </button>
 
             <button
@@ -58,14 +51,11 @@ export default function App() {
               onClick={() => setMode('Reader')}
             >
               <MagnifyingGlassIcon className="h-6 w-6" />
-              <p className={`${mode === 'Reader' ? 'inline-block' : 'hidden'}`}>
-                Read
-              </p>
             </button>
           </nav>
         </header>
 
-        <div className="mx-auto h-0.5 w-full  bg-cyan-600"></div>
+        <div className="mx-auto h-0.5 w-6/12  bg-cyan-400"></div>
 
         <section>
           {mode === 'Generator' && <Generator />}

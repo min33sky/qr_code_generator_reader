@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+/**
+ * QR Code Generator
+ */
 export default function Generator() {
   const [text, setText] = useState('');
   const [qrUrl, setQrUrl] = useState('');
@@ -7,26 +10,29 @@ export default function Generator() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const code = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${text}`;
+    console.log('결과: ', code);
     setQrUrl(code);
   };
 
   return (
     <div className="flex flex-col space-y-4">
-      <form className="flex flex-col space-y-2" onSubmit={handleSubmit}>
+      <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="w-full border-b border-b-slate-800 bg-transparent py-3 text-lg outline-none"
-          placeholder="URL이나 간단한 Text를 남겨주세요."
+          aria-label="Input to enter the URL or text to be converted to QR Code"
+          title="QR 코드로 변환할 URL이나 Text를 입력하세요."
+          className="w-full border-b border-b-cyan-500 bg-transparent py-2 text-base text-cyan-700 outline-none"
+          placeholder="QR Code로 변환할 URL이나 Text를 입력하세요."
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button className="bg-slate-700 py-4 text-lg tracking-widest text-slate-200 transition hover:bg-slate-900">
+        <button className="bg-cyan-700 py-2 text-lg tracking-widest text-cyan-100 transition hover:bg-cyan-900">
           생성하기
         </button>
       </form>
 
       <footer
-        className={`flex  items-center justify-center overflow-hidden rounded-md bg-slate-200 transition-all duration-1000 ${
+        className={`flex  items-center justify-center overflow-hidden rounded-md bg-cyan-50 transition-all duration-1000 ${
           qrUrl ? 'max-h-52' : 'max-h-0'
         }`}
       >
